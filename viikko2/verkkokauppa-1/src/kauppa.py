@@ -1,10 +1,10 @@
-from varasto import Varasto
-from pankki import Pankki
+from varasto import Varasto, varasto as default_varasto
+from pankki import Pankki, pankki as default_pankki
+from viitegeneraattori import Viitegeneraattori, viitegeneraattori as default_vg
 from ostoskori import Ostoskori
-from viitegeneraattori import Viitegeneraattori
 
 class Kauppa:
-    def __init__(self, varasto, pankki, viitegeneraattori):
+    def __init__(self, varasto=default_varasto, pankki=default_pankki, viitegeneraattori=default_vg):
         self._varasto = varasto
         self._pankki = pankki
         self._viitegeneraattori = viitegeneraattori
