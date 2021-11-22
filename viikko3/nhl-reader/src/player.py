@@ -10,3 +10,6 @@ class Player:
     
     def __str__(self):
         return f"{self.name:20} {self.team} {str(self.goals):2} + {str(self.assists):2} = {str(self.goals + self.assists):2}"
+
+    def __getitem__(self,key):
+            return getattr(self,key)
