@@ -107,4 +107,4 @@ class Kumoa:
         self.syote = syote
 
     def suorita(self):
-        pass
+        self.sovellus.kumoa()
