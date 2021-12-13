@@ -41,5 +41,14 @@ def main():
         print(player)
     print("============")
 
+    matcher = Or(
+        HasAtLeast(30, "goals"),
+        HasAtLeast(50, "assists")
+    )
+
+    for player in stats.matches(matcher):
+        print(player)
+    print("============")
+
 if __name__ == "__main__":
     main()
